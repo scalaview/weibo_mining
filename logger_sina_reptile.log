@@ -1,0 +1,338 @@
+2013-06-29 17:00:02,996 - logger_sina_reptile - ERROR - Error occured in reptile,id:1404376560
+Error:list indices must be integers, not str
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 225, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 210, in save_data
+    self.dao.insert_or_update([s for s in statuses])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+TypeError: list indices must be integers, not str
+2013-06-29 17:00:07,276 - logger_sina_reptile - ERROR - Error occured in reptile,id:1878023741
+Error:list indices must be integers, not str
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 225, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 210, in save_data
+    self.dao.insert_or_update([s for s in statuses])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+TypeError: list indices must be integers, not str
+2013-06-29 17:01:48,569 - logger_sina_reptile - ERROR - Error occured in reptile,id:1404376560
+Error:list indices must be integers, not str
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 225, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 210, in save_data
+    self.dao.insert_or_update([s for s in statuses])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+TypeError: list indices must be integers, not str
+2013-06-29 17:01:51,884 - logger_sina_reptile - ERROR - Error occured in reptile,id:1878023741
+Error:list indices must be integers, not str
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 225, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 210, in save_data
+    self.dao.insert_or_update([s for s in statuses])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+TypeError: list indices must be integers, not str
+2013-06-29 17:05:56,494 - logger_sina_reptile - ERROR - Error occured in reptile,id:1404376560
+Error:list indices must be integers, not str
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 225, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 210, in save_data
+    self.dao.insert_or_update([s for s in statuses])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+TypeError: list indices must be integers, not str
+2013-06-29 17:05:59,515 - logger_sina_reptile - ERROR - Error occured in reptile,id:1878023741
+Error:list indices must be integers, not str
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 225, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 210, in save_data
+    self.dao.insert_or_update([s for s in statuses])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+TypeError: list indices must be integers, not str
+2013-06-29 17:09:45,844 - logger_sina_reptile - ERROR - Error occured in reptile,id:1404376560
+Error:parameters are of unsupported type
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 48, in count_by_id
+    "select count(*) from statuses where id='?'", id)
+ValueError: parameters are of unsupported type
+2013-06-29 17:09:48,739 - logger_sina_reptile - ERROR - Error occured in reptile,id:1878023741
+Error:parameters are of unsupported type
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 48, in count_by_id
+    "select count(*) from statuses where id='?'", id)
+ValueError: parameters are of unsupported type
+2013-06-29 17:10:35,969 - logger_sina_reptile - ERROR - Error occured in reptile,id:1404376560
+Error:parameters are of unsupported type
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 48, in count_by_id
+    "select count(*) from statuses where id='?'", (id))
+ValueError: parameters are of unsupported type
+2013-06-29 17:10:38,773 - logger_sina_reptile - ERROR - Error occured in reptile,id:1878023741
+Error:parameters are of unsupported type
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 48, in count_by_id
+    "select count(*) from statuses where id='?'", (id))
+ValueError: parameters are of unsupported type
+2013-06-29 17:11:04,878 - logger_sina_reptile - ERROR - Error occured in reptile,id:1404376560
+Error:parameters are of unsupported type
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 48, in count_by_id
+    "select count(*) from statuses where id=? ", (id))
+ValueError: parameters are of unsupported type
+2013-06-29 17:11:07,663 - logger_sina_reptile - ERROR - Error occured in reptile,id:1878023741
+Error:parameters are of unsupported type
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 48, in count_by_id
+    "select count(*) from statuses where id=? ", (id))
+ValueError: parameters are of unsupported type
+2013-06-29 17:13:00,167 - logger_sina_reptile - ERROR - Error occured in reptile,id:1404376560
+Error:parameters are of unsupported type
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 47, in count_by_id
+    res=self.con.execute("select count(*) from statuses where id=? ", (id))
+ValueError: parameters are of unsupported type
+2013-06-29 17:13:02,838 - logger_sina_reptile - ERROR - Error occured in reptile,id:1878023741
+Error:parameters are of unsupported type
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 47, in count_by_id
+    res=self.con.execute("select count(*) from statuses where id=? ", (id))
+ValueError: parameters are of unsupported type
+2013-06-29 17:14:02,046 - logger_sina_reptile - ERROR - Error occured in reptile,id:1404376560
+Error:unsupported operand type(s) for +: 'long' and 'str'
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 47, in count_by_id
+    res=self.con.execute("select count(*) from statuses where id=? ", (id+''))
+TypeError: unsupported operand type(s) for +: 'long' and 'str'
+2013-06-29 17:14:02,904 - logger_sina_reptile - ERROR - Error occured in reptile,id:1878023741
+Error:unsupported operand type(s) for +: 'long' and 'str'
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 47, in count_by_id
+    res=self.con.execute("select count(*) from statuses where id=? ", (id+''))
+TypeError: unsupported operand type(s) for +: 'long' and 'str'
+2013-06-29 17:15:07,529 - logger_sina_reptile - ERROR - Error occured in reptile,id:1404376560
+Error:'sqlite3.Cursor' object has no attribute '__getitem__'
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 49, in count_by_id
+    else: return float(res[0])
+TypeError: 'sqlite3.Cursor' object has no attribute '__getitem__'
+2013-06-29 17:15:08,263 - logger_sina_reptile - ERROR - Error occured in reptile,id:1878023741
+Error:'sqlite3.Cursor' object has no attribute '__getitem__'
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 49, in count_by_id
+    else: return float(res[0])
+TypeError: 'sqlite3.Cursor' object has no attribute '__getitem__'
+2013-06-29 17:17:28,262 - logger_sina_reptile - ERROR - Error occured in reptile,id:1404376560
+Error:'sqlite3.Cursor' object has no attribute '__getitem__'
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 49, in count_by_id
+    else: return float(res[0])
+TypeError: 'sqlite3.Cursor' object has no attribute '__getitem__'
+2013-06-29 17:17:30,713 - logger_sina_reptile - ERROR - Error occured in reptile,id:1878023741
+Error:'sqlite3.Cursor' object has no attribute '__getitem__'
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 32, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 49, in count_by_id
+    else: return float(res[0])
+TypeError: 'sqlite3.Cursor' object has no attribute '__getitem__'
+2013-06-29 17:26:03,233 - logger_sina_reptile - ERROR - Error occured in reptile,id:1404376560
+Error:unrecognized token: "" 
+				"
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 40, in insert_or_update
+    statuse['bmiddle_pic'], statuse['original_pic'], statuse['usr_id'],))
+OperationalError: unrecognized token: "" 
+				"
+2013-06-29 17:26:05,331 - logger_sina_reptile - ERROR - Error occured in reptile,id:1878023741
+Error:unrecognized token: "" 
+				"
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 40, in insert_or_update
+    statuse['bmiddle_pic'], statuse['original_pic'], statuse['usr_id'],))
+OperationalError: unrecognized token: "" 
+				"
+2013-06-29 17:28:22,483 - logger_sina_reptile - ERROR - Error occured in reptile,id:1404376560
+Error:database is locked
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 45, in insert_or_update
+    self.con.commit()
+OperationalError: database is locked
+2013-06-29 17:28:43,742 - logger_sina_reptile - ERROR - Error occured in reptile,id:1878023741
+Error:database is locked
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 226, in reptile
+    sina_reptile.save_data(statuses)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 211, in save_data
+    self.dao.insert_or_update(s)
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 33, in insert_or_update
+    count=self.count_by_id(statuse['id'])
+  File "D:\newWorkspace\workspace03\weibo_mining\web_api\sina_dao.py", line 48, in count_by_id
+    res=self.cur.execute("select count(*) from statuses where id= :id ", {'id': id}).fetchone()
+OperationalError: database is locked
+2013-06-29 17:38:59,746 - logger_sina_reptile - ERROR - Error occured when access status use user_id:1216766752
+Error:time data u'' does not match format '%a %b %d %H:%M:%S +0800 %Y'
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 147, in get_latest_weibo
+    timeline = self.api.user_timeline(count=count, user_id=user_id)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 191, in _call
+    return method.execute()
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 180, in execute
+    result = self.api.parser.parse(self, body)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\parsers.py", line 72, in parse
+    result = model.parse_list(method.api, json)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\models.py", line 36, in parse_list
+    results.append(cls.parse(api, obj))
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\models.py", line 61, in parse
+    setattr(status, k, User.parse(api, v))
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\models.py", line 130, in parse
+    setattr(user, k, parse_datetime(v))
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\utils.py", line 14, in parse_datetime
+    return datetime(*(time.strptime(str, '%a %b %d %H:%M:%S +0800 %Y')[0:6]))
+  File "D:\Program Files\Python27\lib\_strptime.py", line 454, in _strptime_time
+    return _strptime(data_string, format)[0]
+  File "D:\Program Files\Python27\lib\_strptime.py", line 325, in _strptime
+    (data_string, format))
+ValueError: time data u'' does not match format '%a %b %d %H:%M:%S +0800 %Y'
+2013-06-30 10:44:15,891 - logger_sina_reptile - ERROR - Error occured when access status use user_id:1925385980
+Error:Failed to send request: [Errno 11001] getaddrinfo failedurl=/statuses/user_timeline.json?count=5&source=3303497289&user_id=1925385980,self.headers={'Host': 'api.t.sina.com.cn', 'Authorization': 'OAuth realm="", oauth_version="1.0", oauth_signature="H6PAlOiLOxpYcvg8o%2BX0WWlT9Tk%3D", oauth_nonce="64440507", oauth_timestamp="1372560255", oauth_token="4fd237c0a4db4c1ab89708a8387a9528", oauth_consumer_key="3303497289", oauth_signature_method="HMAC-SHA1"'}
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 147, in get_latest_weibo
+    timeline = self.api.user_timeline(count=count, user_id=user_id)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 191, in _call
+    return method.execute()
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 147, in execute
+    raise WeibopError('Failed to send request: %s' % e + "url=" + str(url) +",self.headers="+ str(self.headers))
+WeibopError: Failed to send request: [Errno 11001] getaddrinfo failedurl=/statuses/user_timeline.json?count=5&source=3303497289&user_id=1925385980,self.headers={'Host': 'api.t.sina.com.cn', 'Authorization': 'OAuth realm="", oauth_version="1.0", oauth_signature="H6PAlOiLOxpYcvg8o%2BX0WWlT9Tk%3D", oauth_nonce="64440507", oauth_timestamp="1372560255", oauth_token="4fd237c0a4db4c1ab89708a8387a9528", oauth_consumer_key="3303497289", oauth_signature_method="HMAC-SHA1"'}
+2013-06-30 10:57:43,525 - logger_sina_reptile - ERROR - Error occured when access status use user_id:1878023741
+Error:Failed to send request: [Errno 11001] getaddrinfo failedurl=/statuses/user_timeline.json?count=5&source=3303497289&user_id=1878023741,self.headers={'Host': 'api.t.sina.com.cn', 'Authorization': 'OAuth realm="", oauth_version="1.0", oauth_signature="9DuQlblyBLOiSAcZonEG5dPSzR8%3D", oauth_nonce="33399134", oauth_timestamp="1372561051", oauth_token="4fd237c0a4db4c1ab89708a8387a9528", oauth_consumer_key="3303497289", oauth_signature_method="HMAC-SHA1"'}
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 147, in get_latest_weibo
+    timeline = self.api.user_timeline(count=count, user_id=user_id)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 191, in _call
+    return method.execute()
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 147, in execute
+    raise WeibopError('Failed to send request: %s' % e + "url=" + str(url) +",self.headers="+ str(self.headers))
+WeibopError: Failed to send request: [Errno 11001] getaddrinfo failedurl=/statuses/user_timeline.json?count=5&source=3303497289&user_id=1878023741,self.headers={'Host': 'api.t.sina.com.cn', 'Authorization': 'OAuth realm="", oauth_version="1.0", oauth_signature="9DuQlblyBLOiSAcZonEG5dPSzR8%3D", oauth_nonce="33399134", oauth_timestamp="1372561051", oauth_token="4fd237c0a4db4c1ab89708a8387a9528", oauth_consumer_key="3303497289", oauth_signature_method="HMAC-SHA1"'}
+2013-06-30 10:58:20,197 - logger_sina_reptile - ERROR - Error occured when access status use user_id:1878023741
+Error:Failed to send request: [Errno 11001] getaddrinfo failedurl=/statuses/user_timeline.json?count=5&source=3303497289&user_id=1878023741,self.headers={'Host': 'api.t.sina.com.cn', 'Authorization': 'OAuth realm="", oauth_version="1.0", oauth_signature="OOmo6WVC01HV2pOghEvCMdNmRbY%3D", oauth_nonce="53529675", oauth_timestamp="1372561088", oauth_token="4fd237c0a4db4c1ab89708a8387a9528", oauth_consumer_key="3303497289", oauth_signature_method="HMAC-SHA1"'}
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 147, in get_latest_weibo
+    timeline = self.api.user_timeline(count=count, user_id=user_id)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 191, in _call
+    return method.execute()
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 147, in execute
+    raise WeibopError('Failed to send request: %s' % e + "url=" + str(url) +",self.headers="+ str(self.headers))
+WeibopError: Failed to send request: [Errno 11001] getaddrinfo failedurl=/statuses/user_timeline.json?count=5&source=3303497289&user_id=1878023741,self.headers={'Host': 'api.t.sina.com.cn', 'Authorization': 'OAuth realm="", oauth_version="1.0", oauth_signature="OOmo6WVC01HV2pOghEvCMdNmRbY%3D", oauth_nonce="53529675", oauth_timestamp="1372561088", oauth_token="4fd237c0a4db4c1ab89708a8387a9528", oauth_consumer_key="3303497289", oauth_signature_method="HMAC-SHA1"'}
+2013-06-30 11:02:03,937 - logger_sina_reptile - ERROR - Error occured when access status use user_id:1878023741
+Error:Failed to send request: [Errno 10060] url=/statuses/user_timeline.json?count=5&source=3303497289&user_id=1878023741,self.headers={'Host': 'api.t.sina.com.cn', 'Authorization': 'OAuth realm="", oauth_version="1.0", oauth_signature="dEYzhQfhxSZQdh8it1hMMdf7m4o%3D", oauth_nonce="56606313", oauth_timestamp="1372561302", oauth_token="4fd237c0a4db4c1ab89708a8387a9528", oauth_consumer_key="3303497289", oauth_signature_method="HMAC-SHA1"'}
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 147, in get_latest_weibo
+    timeline = self.api.user_timeline(count=count, user_id=user_id)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 191, in _call
+    return method.execute()
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 147, in execute
+    raise WeibopError('Failed to send request: %s' % e + "url=" + str(url) +",self.headers="+ str(self.headers))
+WeibopError: Failed to send request: [Errno 10060] url=/statuses/user_timeline.json?count=5&source=3303497289&user_id=1878023741,self.headers={'Host': 'api.t.sina.com.cn', 'Authorization': 'OAuth realm="", oauth_version="1.0", oauth_signature="dEYzhQfhxSZQdh8it1hMMdf7m4o%3D", oauth_nonce="56606313", oauth_timestamp="1372561302", oauth_token="4fd237c0a4db4c1ab89708a8387a9528", oauth_consumer_key="3303497289", oauth_signature_method="HMAC-SHA1"'}

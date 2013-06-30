@@ -1,0 +1,32 @@
+$def with(userid)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html><head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <!--<meta http-equiv="refresh" content="20">-->
+  <title>训练信息</title> 
+</head>
+<script type="text/javascript" src='http://code.jquery.com/jquery-latest.min.js'>
+</script>
+<script type="text/javascript">
+
+</script>
+<style type="text/css">
+
+</style>
+<body>
+<div>
+
+<div>
+	<form action="/api/mining" method="POST">
+	<input name="userid" type="text" value="$userid"/>
+	<input name="count" type="text" value="5"/>
+	<input type="submit" value="提交"/>
+	</form>
+</div>
+<div id="display">
+</div>
+</div>
+</body>
+</html>

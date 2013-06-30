@@ -1,0 +1,100 @@
+$def with(page)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html><head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <!--<meta http-equiv="refresh" content="20">-->
+  <title>训练信息</title> 
+</head>
+<script type="text/javascript" src='http://code.jquery.com/jquery-latest.min.js'>
+</script>
+<script type="text/javascript">
+$$(document).ready(function(){
+	// var jsonData = {1:'a', 2:'v', 3:'f', 4:'r', 5:'t', 6:'y', 7:'u', 8:'i'}
+	$$.ajax({
+		url : "/api/pro",
+		type : 'GET',
+		dataType : 'html',
+		success : function(json) {
+			var jsonData = eval("("+json+")");
+			$$("div[name='checkedBox']").each(function(){
+				$$this = $$(this);
+				$$.each(jsonData, function(n, v){
+					$$this.append("<span class='kindbox'><input type='checkbox' value='"+n+"'/>"+v+"</span>")
+			});
+		});
+		},
+		error : function(xhr, status) {
+			alert('更新错误！');
+		},
+		beforeSend : function (xhr){	
+		},
+		complete : function(xhr, status) {
+		}
+	});
+	
+
+	$$("form").submit(function(){
+		$$this = $$(this);
+		var ch= [];
+		var u = 0;
+		$$this.find("input[type='checkbox']").filter(':checked').each(function(){
+			ch.push($$(this).val())
+		});
+		$$this.find("input[name='id']").each(function(){
+			u=$$(this).val()
+		});
+		$$.ajax({
+			url : $$this.attr('action'),
+			data : { 'id' : u,'kind' : ch.join(';'), 'content': $$($$this.find('pre')).text()},
+			type : 'POST',
+			dataType : 'html',
+			success : function(json) {
+				alert(json);
+			},
+			error : function(xhr, status) {
+				alert('更新错误！');
+			},
+			beforeSend : function (xhr){	
+			},
+			complete : function(xhr, status) {
+			}
+		});
+		return false;
+	});
+
+
+});
+
+</script>
+<style type="text/css">
+.subclass{
+	margin-left: 1024px;
+}
+.kindbox{
+    margin-right: 25px;
+}
+</style>
+<body>
+<div>
+
+
+$for item in page:
+	<form action="/api/traindata">
+		<input type="hidden" name="id" value="$item.id"/>
+		<div>
+			<ul>
+			<pre>$item.text</pre>
+				<div name="checkedBox">
+				</div>
+				<div>
+					<input type="submit" name="sub" value="提交" class="subclass" />
+				</div>
+			</ul>
+		</div>
+	</form>
+
+</div>
+</body>
+</html>
