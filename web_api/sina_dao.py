@@ -34,7 +34,7 @@ create table if not exists statuses(
 		count=self.count_by_id(statuse['id'])
 		if count==0:
 			self.cur.execute('''
-				insert into statuses values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?，？)
+				insert into statuses values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 				''', ( statuse['id'], statuse['mid'], statuse['text'], statuse['source'],\
 				statuse['favorited'], statuse['truncated'], statuse['created_at'], statuse['in_reply_to_status_id'],\
 				statuse['in_reply_to_user_id'], statuse['in_reply_to_screen_name'], statuse['thumbnail_pic'], \

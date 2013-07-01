@@ -35,8 +35,9 @@ class Index:
 		'''select id, text from statuses order by id limit ? , ?'''
 		posts = db.query('select id, text from statuses where status=0 order by id limit $pageIndex , $pageSize', \
 			vars={'pageIndex': i.pageIndex, 'pageSize': i.pageSize})
-		count = db.select('statuses', what="count(*) c", where="status=$status", vars={'status': 0})
-		print "val:%s"%count.c
+		count = db.query("SELECT count(*) c FROM statuses WHERE status='0'")
+                print 'val:%s'%int(count.c)
+                    
 		c = count.c/i.pageSize
 		if (count.c%i.pageSize)!=0: c+=1
 		return render.index(posts, {"count": c, "pageIndex": i.pageIndex, "pageSize": i.pageSize})

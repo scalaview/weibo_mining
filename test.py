@@ -11,20 +11,20 @@ import string
 
 # def test():
 	# print docclass.getwords("aaa,bbb,vvv,ddd,eee,ddd,ffff,ddd,ddd,sss,aaa,aaa,ddd")
-extra_punctuation="，。“”＂！、‘’（）@#￥%……&*——+=： "
+# extra_punctuation="，。“”＂！、‘’（）@#￥%……&*——+=： "
 def main():
 	# table = string.maketrans("","")
-	s = '从满脸痘痘到细腻皮肤的蜕变，大S及皮肤科医生都推荐的修复面膜，[ 围观]解决皮肤的多种问题~点击查看详情：http://t.cn/zHFnve4'
-	for x in getWords(s):
-		print x
+	# s = '从满脸痘痘到细腻皮肤的蜕变，大S及皮肤科医生都推荐的修复面膜，[ 围观]解决皮肤的多种问题~点击查看详情：http://t.cn/zHFnve4'
+	# for x in getWords(s):
+	# 	print x
 	# s.translate(table, string.punctuation+extra_punctuation)
 	# regxs = {r'\[\S+?\]': ''}
 	# for key,value in regxs.items():
 	# 	print key, value
-	# with open("test.txt", "r") as f:
-		# consumer_key,consumer_secret,key,secret,userid = f.readlines()[1].strip().split(' ')
+	with open("test.txt", "r") as f:
+		consumer_key,consumer_secret,key,secret,userid = f.readlines()[0].strip().split(' ')
 	# print consumer_key,consumer_secret,key,secret,userid
-	# run_crawler(consumer_key,consumer_secret,key,secret,userid)
+	run_crawler(consumer_key,consumer_secret,key,secret,userid)
 	# weibo = Sina_master(consumer_key,consumer_secret)
 	# weibo.setToken(key, secret)
 	# weibo.manage_access()
