@@ -30,12 +30,16 @@ weibo.setToken(key, secret)
 res = open(conf.pro_path).read()
 
 class Index:
-	def GET(self, pageIndex=1, pageSize=5):
+	def GET(self):
+		i = web.input(pageIndex=1, pageSize=5)
 		'''select id, text from statuses order by id limit ? , ?'''
 		posts = db.query('select id, text from statuses where status=0 order by id limit $pageIndex , $pageSize', \
-			vars={'pageIndex': pageIndex, 'pageSize': pageSize})
-		# print posts
-		return render.index(posts)
+			vars={'pageIndex': i.pageIndex, 'pageSize': i.pageSize})
+		count = db.select('statuses', what="count(*) c", where="status=$status", vars={'status': 0})
+		print "val:%s"%count.c
+		c = count.c/i.pageSize
+		if (count.c%i.pageSize)!=0: c+=1
+		return render.index(posts, {"count": c, "pageIndex": i.pageIndex, "pageSize": i.pageSize})
 
 class Traindata:
 	def POST(self):

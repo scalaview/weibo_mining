@@ -1,4 +1,4 @@
-$def with(page)
+$def with(page, p)
 
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
@@ -20,8 +20,15 @@ $$(document).ready(function(){
 			var jsonData = eval("("+json+")");
 			$$("div[name='checkedBox']").each(function(){
 				$$this = $$(this);
+				var i = 0;
+				$$div = $$("<div></div>");
+				$$this.append($$div)
 				$$.each(jsonData, function(n, v){
-					$$this.append("<span class='kindbox'><input type='checkbox' value='"+n+"'/>"+v+"</span>")
+					if((i++%10)== 0){
+						$$div = $$("<div></div>");
+						$$this.append($$div)
+					}
+					$$div.append("<span class='kindbox'><input type='checkbox' value='"+n+"'/>"+v+"</span>")
 			});
 		});
 		},
@@ -33,8 +40,29 @@ $$(document).ready(function(){
 		complete : function(xhr, status) {
 		}
 	});
-	
-
+	function pageBuilder(node, pageIndex, page, interval){
+		if(pageIndex!=1 && page!=0){
+			node.append('<li><a class="a_pager" href="javascript:void(0);" title="1">首页</a></li>')
+			node.append('<li><a class="a_pager" href="javascript:void(0);" title="'+pageIndex-1+'">上一页</a></li>')
+		}
+		for(var i=interval; i>0; i--){
+			if(pageIndex-i>0){
+				node.append('<li><a class="a_pager" href="javascript:void(0);" title="'+pageIndex-i+'">'+pageIndex-i+'</a></li>')
+			}
+		}
+		for(var i=1; i<=interval; i++){
+			if(pageIndex+i<=page){
+				node.append('<li><a class="a_pager" href="javascript:void(0);" title="'+pageIndex+i+'">'+pageIndex+i+'</a></li>')
+			}
+		}
+		if(pageIndex+1<=page && page!=0){
+			node.append('<li><a class="a_pager" href="javascript:void(0);" title="'+pageIndex+1+'">下一页</a></li>')
+		}
+		if(pageIndex!=page && page!=0){
+			node.append('<li><a class="a_pager" href="javascript:void(0);" title="'+page+'">末页</a></li>')
+		}
+	}
+	pageBuilder($$(".float-right"), $p['pageIndex'], $p['count'], 3);
 	$$("form").submit(function(){
 		$$this = $$(this);
 		var ch= [];
@@ -95,6 +123,13 @@ $for item in page:
 		</div>
 	</form>
 
+<form action="/getinfos" method="GET">
+	<input name="pageIndex" value="$p['pageIndex']"/>
+	<input name="pageSize" value="$p['pageSize']"/>
+</form>
+<div class="pagination">
+			<ul class="float-right"></ul>
+</div>
 </div>
 </body>
 </html>
