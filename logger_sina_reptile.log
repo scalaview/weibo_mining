@@ -582,3 +582,135 @@ Traceback (most recent call last):
   File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 147, in execute
     raise WeibopError('Failed to send request: %s' % e + "url=" + str(url) +",self.headers="+ str(self.headers))
 WeibopError: Failed to send request: [Errno 11001] getaddrinfo failedurl=/friends/ids.json?cursor=0&source=211160679&user_id=1038944114,self.headers={'Host': 'api.t.sina.com.cn', 'Authorization': 'OAuth realm="", oauth_version="1.0", oauth_signature="WnFi%2FJgrqluXJzQvojR12Q84LQ4%3D", oauth_nonce="29407986", oauth_timestamp="1372696963", oauth_token="44bd489d6a128abefdd297ae8d4a494d", oauth_consumer_key="211160679", oauth_signature_method="HMAC-SHA1"'}
+2013-07-02 21:29:04,520 - logger_sina_reptile - ERROR - Error occured in reptile,id:2053975695
+Error:Failed to send request: [Errno 10060] url=/account/rate_limit_status.json?source=211160679,self.headers={'Host': 'api.t.sina.com.cn', 'Authorization': 'OAuth realm="", oauth_nonce="91193902", oauth_consumer_key="211160679", oauth_timestamp="1372771723", oauth_signature_method="HMAC-SHA1", oauth_version="1.0", oauth_token="44bd489d6a128abefdd297ae8d4a494d", oauth_signature="6XX0NGqOlbi07TpPdl59cC0POqU%3D"'}
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 220, in reptile
+    sina_reptile.manage_access()
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 202, in manage_access
+    info = self.api.rate_limit_status()
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 191, in _call
+    return method.execute()
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 147, in execute
+    raise WeibopError('Failed to send request: %s' % e + "url=" + str(url) +",self.headers="+ str(self.headers))
+WeibopError: Failed to send request: [Errno 10060] url=/account/rate_limit_status.json?source=211160679,self.headers={'Host': 'api.t.sina.com.cn', 'Authorization': 'OAuth realm="", oauth_nonce="91193902", oauth_consumer_key="211160679", oauth_timestamp="1372771723", oauth_signature_method="HMAC-SHA1", oauth_version="1.0", oauth_token="44bd489d6a128abefdd297ae8d4a494d", oauth_signature="6XX0NGqOlbi07TpPdl59cC0POqU%3D"'}
+2013-07-02 22:18:41,005 - logger_sina_reptile - ERROR - Error occured when access status use user_id:2092611905
+Error:time data u'' does not match format '%a %b %d %H:%M:%S +0800 %Y'
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 147, in get_latest_weibo
+    timeline = self.api.user_timeline(count=count, user_id=user_id)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 191, in _call
+    return method.execute()
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 180, in execute
+    result = self.api.parser.parse(self, body)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\parsers.py", line 72, in parse
+    result = model.parse_list(method.api, json)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\models.py", line 36, in parse_list
+    results.append(cls.parse(api, obj))
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\models.py", line 61, in parse
+    setattr(status, k, User.parse(api, v))
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\models.py", line 130, in parse
+    setattr(user, k, parse_datetime(v))
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\utils.py", line 14, in parse_datetime
+    return datetime(*(time.strptime(str, '%a %b %d %H:%M:%S +0800 %Y')[0:6]))
+  File "D:\Program Files\Python27\lib\_strptime.py", line 454, in _strptime_time
+    return _strptime(data_string, format)[0]
+  File "D:\Program Files\Python27\lib\_strptime.py", line 325, in _strptime
+    (data_string, format))
+ValueError: time data u'' does not match format '%a %b %d %H:%M:%S +0800 %Y'
+2013-07-02 22:21:26,308 - logger_sina_reptile - ERROR - Error occured when access status use user_id:1084579593
+Error:time data u'' does not match format '%a %b %d %H:%M:%S +0800 %Y'
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 147, in get_latest_weibo
+    timeline = self.api.user_timeline(count=count, user_id=user_id)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 191, in _call
+    return method.execute()
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 180, in execute
+    result = self.api.parser.parse(self, body)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\parsers.py", line 72, in parse
+    result = model.parse_list(method.api, json)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\models.py", line 36, in parse_list
+    results.append(cls.parse(api, obj))
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\models.py", line 61, in parse
+    setattr(status, k, User.parse(api, v))
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\models.py", line 130, in parse
+    setattr(user, k, parse_datetime(v))
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\utils.py", line 14, in parse_datetime
+    return datetime(*(time.strptime(str, '%a %b %d %H:%M:%S +0800 %Y')[0:6]))
+  File "D:\Program Files\Python27\lib\_strptime.py", line 454, in _strptime_time
+    return _strptime(data_string, format)[0]
+  File "D:\Program Files\Python27\lib\_strptime.py", line 325, in _strptime
+    (data_string, format))
+ValueError: time data u'' does not match format '%a %b %d %H:%M:%S +0800 %Y'
+2013-07-02 22:23:23,005 - logger_sina_reptile - ERROR - Error occured when access status use user_id:3108242177
+Error:time data u'' does not match format '%a %b %d %H:%M:%S +0800 %Y'
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 147, in get_latest_weibo
+    timeline = self.api.user_timeline(count=count, user_id=user_id)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 191, in _call
+    return method.execute()
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 180, in execute
+    result = self.api.parser.parse(self, body)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\parsers.py", line 72, in parse
+    result = model.parse_list(method.api, json)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\models.py", line 36, in parse_list
+    results.append(cls.parse(api, obj))
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\models.py", line 61, in parse
+    setattr(status, k, User.parse(api, v))
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\models.py", line 130, in parse
+    setattr(user, k, parse_datetime(v))
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\utils.py", line 14, in parse_datetime
+    return datetime(*(time.strptime(str, '%a %b %d %H:%M:%S +0800 %Y')[0:6]))
+  File "D:\Program Files\Python27\lib\_strptime.py", line 454, in _strptime_time
+    return _strptime(data_string, format)[0]
+  File "D:\Program Files\Python27\lib\_strptime.py", line 325, in _strptime
+    (data_string, format))
+ValueError: time data u'' does not match format '%a %b %d %H:%M:%S +0800 %Y'
+2013-07-02 22:24:43,311 - logger_sina_reptile - ERROR - Error occured when access status use user_id:2159093045
+Error:time data u'' does not match format '%a %b %d %H:%M:%S +0800 %Y'
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 147, in get_latest_weibo
+    timeline = self.api.user_timeline(count=count, user_id=user_id)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 191, in _call
+    return method.execute()
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 180, in execute
+    result = self.api.parser.parse(self, body)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\parsers.py", line 72, in parse
+    result = model.parse_list(method.api, json)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\models.py", line 36, in parse_list
+    results.append(cls.parse(api, obj))
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\models.py", line 61, in parse
+    setattr(status, k, User.parse(api, v))
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\models.py", line 130, in parse
+    setattr(user, k, parse_datetime(v))
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\utils.py", line 14, in parse_datetime
+    return datetime(*(time.strptime(str, '%a %b %d %H:%M:%S +0800 %Y')[0:6]))
+  File "D:\Program Files\Python27\lib\_strptime.py", line 454, in _strptime_time
+    return _strptime(data_string, format)[0]
+  File "D:\Program Files\Python27\lib\_strptime.py", line 325, in _strptime
+    (data_string, format))
+ValueError: time data u'' does not match format '%a %b %d %H:%M:%S +0800 %Y'
+2013-07-02 22:28:48,982 - logger_sina_reptile - ERROR - Error occured in reptile,id:3481369917
+Error:Failed to send request: [Errno 10060] url=/friends/ids.json?cursor=500&source=211160679&user_id=3481369917,self.headers={'Host': 'api.t.sina.com.cn', 'Authorization': 'OAuth realm="", oauth_version="1.0", oauth_signature="wT2VlDYu3R%2FR6wxPMPFaeUk4Nfg%3D", oauth_nonce="34964288", oauth_timestamp="1372775307", oauth_token="44bd489d6a128abefdd297ae8d4a494d", oauth_consumer_key="211160679", oauth_signature_method="HMAC-SHA1"'}
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 221, in reptile
+    return_ids = sina_reptile.friends_ids(id)
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 191, in friends_ids
+    fids = self.api.friends_ids(user_id=id,cursor=cursor)
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 191, in _call
+    return method.execute()
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 147, in execute
+    raise WeibopError('Failed to send request: %s' % e + "url=" + str(url) +",self.headers="+ str(self.headers))
+WeibopError: Failed to send request: [Errno 10060] url=/friends/ids.json?cursor=500&source=211160679&user_id=3481369917,self.headers={'Host': 'api.t.sina.com.cn', 'Authorization': 'OAuth realm="", oauth_version="1.0", oauth_signature="wT2VlDYu3R%2FR6wxPMPFaeUk4Nfg%3D", oauth_nonce="34964288", oauth_timestamp="1372775307", oauth_token="44bd489d6a128abefdd297ae8d4a494d", oauth_consumer_key="211160679", oauth_signature_method="HMAC-SHA1"'}
+2013-07-02 22:30:00,987 - logger_sina_reptile - ERROR - Error occured in reptile,id:3157976807
+Error:Failed to send request: [Errno 11001] getaddrinfo failedurl=/account/rate_limit_status.json?source=211160679,self.headers={'Host': 'api.t.sina.com.cn', 'Authorization': 'OAuth realm="", oauth_nonce="41128652", oauth_consumer_key="211160679", oauth_timestamp="1372775388", oauth_signature_method="HMAC-SHA1", oauth_version="1.0", oauth_token="44bd489d6a128abefdd297ae8d4a494d", oauth_signature="PEjdsRyLVXDi0TdqM4otvMpDuh0%3D"'}
+Traceback (most recent call last):
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 220, in reptile
+    sina_reptile.manage_access()
+  File "D:\newWorkspace\workspace03\weibo_mining\sina_master.py", line 202, in manage_access
+    info = self.api.rate_limit_status()
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 191, in _call
+    return method.execute()
+  File "D:\newWorkspace\workspace03\weibo_mining\weibopy\binder.py", line 147, in execute
+    raise WeibopError('Failed to send request: %s' % e + "url=" + str(url) +",self.headers="+ str(self.headers))
+WeibopError: Failed to send request: [Errno 11001] getaddrinfo failedurl=/account/rate_limit_status.json?source=211160679,self.headers={'Host': 'api.t.sina.com.cn', 'Authorization': 'OAuth realm="", oauth_nonce="41128652", oauth_consumer_key="211160679", oauth_timestamp="1372775388", oauth_signature_method="HMAC-SHA1", oauth_version="1.0", oauth_token="44bd489d6a128abefdd297ae8d4a494d", oauth_signature="PEjdsRyLVXDi0TdqM4otvMpDuh0%3D"'}

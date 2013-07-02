@@ -24,7 +24,8 @@ def getWords(doc):
   res = dict()
   for w in jieba.cut_for_search(doc):
     if w in string.punctuation+extra_punctuation or len(w)<2:
-      print "s", w
+      # print "s", w
+      pass
     else:
       res[w] =1
   return res

@@ -24,7 +24,7 @@ def main():
 	with open("test.txt", "r") as f:
 		consumer_key,consumer_secret,key,secret,userid = f.readlines()[0].strip().split(' ')
 	# print consumer_key,consumer_secret,key,secret,userid
-	run_crawler(consumer_key,consumer_secret,key,secret,userid)
+	run_crawler(consumer_key,consumer_secret,key,secret,'1986653865')
 	# weibo = Sina_master(consumer_key,consumer_secret)
 	# weibo.setToken(key, secret)
 	# weibo.manage_access()
