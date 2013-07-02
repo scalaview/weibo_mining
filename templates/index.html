@@ -43,27 +43,33 @@ $$(document).ready(function(){
 	function pageBuilder(node, pageIndex, page, interval){
 		if(pageIndex!=1 && page!=0){
 			node.append('<li><a class="a_pager" href="javascript:void(0);" title="1">首页</a></li>')
-			node.append('<li><a class="a_pager" href="javascript:void(0);" title="'+pageIndex-1+'">上一页</a></li>')
+			node.append('<li><a class="a_pager" href="javascript:void(0);" title="'+(pageIndex-1)+'">上一页</a></li>')
 		}
 		for(var i=interval; i>0; i--){
 			if(pageIndex-i>0){
-				node.append('<li><a class="a_pager" href="javascript:void(0);" title="'+pageIndex-i+'">'+pageIndex-i+'</a></li>')
+				node.append('<li><a class="a_pager" href="javascript:void(0);" title="'+(pageIndex-i)+'">'+(pageIndex-i)+'</a></li>')
 			}
 		}
+		node.append('<li><span title="'+pageIndex+'">'+pageIndex+'</span></li>')
 		for(var i=1; i<=interval; i++){
 			if(pageIndex+i<=page){
-				node.append('<li><a class="a_pager" href="javascript:void(0);" title="'+pageIndex+i+'">'+pageIndex+i+'</a></li>')
+				node.append('<li><a class="a_pager" href="javascript:void(0);" title="'+(pageIndex+i)+'">'+(pageIndex+i)+'</a></li>')
 			}
 		}
 		if(pageIndex+1<=page && page!=0){
-			node.append('<li><a class="a_pager" href="javascript:void(0);" title="'+pageIndex+1+'">下一页</a></li>')
+			node.append('<li><a class="a_pager" href="javascript:void(0);" title="'+(pageIndex+1)+'">下一页</a></li>')
 		}
 		if(pageIndex!=page && page!=0){
 			node.append('<li><a class="a_pager" href="javascript:void(0);" title="'+page+'">末页</a></li>')
 		}
 	}
 	pageBuilder($$(".float-right"), $p['pageIndex'], $p['count'], 3);
-	$$("form").submit(function(){
+	$$(".a_pager").click(function(){
+		var pageIndex = $$(this).attr('title')
+		$$("#pageIndex").val(pageIndex)
+		$$("#pager").submit()
+	});
+	$$("form[name='info']").submit(function(){
 		$$this = $$(this);
 		var ch= [];
 		var u = 0;
@@ -109,7 +115,7 @@ $$(document).ready(function(){
 
 
 $for item in page:
-	<form action="/api/traindata">
+	<form action="/api/traindata" name="info">
 		<input type="hidden" name="id" value="$item.id"/>
 		<div>
 			<ul>
@@ -123,9 +129,9 @@ $for item in page:
 		</div>
 	</form>
 
-<form action="/getinfos" method="GET">
-	<input name="pageIndex" value="$p['pageIndex']"/>
-	<input name="pageSize" value="$p['pageSize']"/>
+<form action="/getinfos" method="GET" id="pager">
+	<input type="hidden" name="pageIndex" id="pageIndex" value="$p['pageIndex']"/>
+	<input type="hidden" name="pageSize" id="pageSize" value="$p['pageSize']"/>
 </form>
 <div class="pagination">
 			<ul class="float-right"></ul>
