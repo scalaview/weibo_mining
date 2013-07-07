@@ -26,7 +26,7 @@ def main():
 		consumer_key,consumer_secret,key,secret,userid = f.readlines()[0].strip().split(' ')
 	weibo = Sina_master(consumer_key,consumer_secret)
 	weibo.setToken(key, secret)
-	info = weibo.get_latest_weibo(count=5, user_id="1876005872")
+	info = weibo.get_latest_weibo(count=50, user_id="1906168267")#1986653865 #1794530900
 
 	with open(cache_file, 'w') as f:
 		for x in info:

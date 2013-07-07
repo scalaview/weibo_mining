@@ -239,18 +239,17 @@ class total_classify(classifier):
 
   def total_fisherprob(self, key, features):
     p= self.total_weightedprob(key, features)
-    fscore=-2*math.log(p)
+    return p/len(features)
 
-    return self.invchi2(fscore, len(features)*2)
 
   def total_weightedprob(self, key, features, def_weight=0.5):
-    p= 1
+    p= 0
     for f in features:
       jsdata = json.loads(f)
       if key in jsdata.keys():
-        p*= jsdata[key]
+        p+= jsdata[key]
       else:
-        p*= def_weight
+        p+= def_weight
     return p
 
   def invchi2(self,chi, df):
