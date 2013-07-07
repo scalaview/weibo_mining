@@ -11,7 +11,9 @@ import string
 
 # def test():
 	# print docclass.getwords("aaa,bbb,vvv,ddd,eee,ddd,ffff,ddd,ddd,sss,aaa,aaa,ddd")
-# extra_punctuation="，。“”＂！、‘’（）@#￥%……&*——+=： "
+extra_punctuation="，。“”＂！、‘’（）@#￥%……&*——+=： "
+input_ = "洒脱人生该学会的10个安慰】 1.最重要的是今天的心 2.自己的心痛只能自己疗 3.好心境是自己创造的 4.用心做自己该做的事 5.别总是自己跟自己过不去 6.不要过于计较别人的评价 7.喜欢自己才会拥抱生活 8.木已成舟便要顺其自然 9.重要的是活得充实 10.感觉幸福就是幸福"
+
 def main():
 	# table = string.maketrans("","")
 	# s = '从满脸痘痘到细腻皮肤的蜕变，大S及皮肤科医生都推荐的修复面膜，[ 围观]解决皮肤的多种问题~点击查看详情：http://t.cn/zHFnve4'
@@ -21,10 +23,10 @@ def main():
 	# regxs = {r'\[\S+?\]': ''}
 	# for key,value in regxs.items():
 	# 	print key, value
-	with open("test.txt", "r") as f:
-		consumer_key,consumer_secret,key,secret,userid = f.readlines()[0].strip().split(' ')
+	# with open("test.txt", "r") as f:
+		# consumer_key,consumer_secret,key,secret,userid = f.readlines()[0].strip().split(' ')
 	# print consumer_key,consumer_secret,key,secret,userid
-	run_crawler(consumer_key,consumer_secret,key,secret,'1986653865')
+	# run_crawler(consumer_key,consumer_secret,key,secret,'1986653865')
 	# weibo = Sina_master(consumer_key,consumer_secret)
 	# weibo.setToken(key, secret)
 	# weibo.manage_access()
@@ -37,12 +39,13 @@ def main():
 		# print x['text']
 		# words =getWords(x['text'])
 		# # print x['text']
-		# cl = docclass.fisherclassifier(getWords)
-		# cl.setdb('test.db')
+		cl = docclass.fisherclassifier(docclass.getWords)
+		cl.setdb('statuses.db')
 		# print cl.cprob('幸福', 'test')
 		# print cl.fisherprob('幸福', 'test')
 		# cl.train(x, 'test;up;kill;volite')
-		# print cl.classifypercent('故事的结尾是周公子和易烨卿幸福地生活在一起么')
+		dic =cl.classifypercent(input_)
+		print sorted(dic.items(), key=lambda e:e[1], reverse=True)
 		# print ','.join(jieba.cut(x['text']))
 		# print words, _mood
 		# for t in words:

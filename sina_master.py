@@ -152,7 +152,7 @@ class Sina_master():
           return None
       for line in timeline:
           self.obj = line
-	  statusprofile = {}
+          statusprofile = {}
           statusprofile['usr_id'] = user_id
           statusprofile['id'] = self.getAtt("id")
           statusprofile['created_at'] = self.getAtt("created_at")

@@ -6,6 +6,7 @@ import re
 import math
 import jieba
 import string
+import json
 
 extra_punctuation="＂"
 
@@ -105,7 +106,7 @@ class classifier:
     # category divided by the total number of items in this category
     return self.fcount(f,cat)/self.catcount(cat)
 
-  def weightedprob(self,f,cat,prf,weight=1.0,ap=0.5):
+  def weightedprob(self,f,cat,prf,weight=1.0,ap=0.45):
     # Calculate current probability
     basicprob=prf(f,cat)
 
@@ -224,6 +225,48 @@ class fisherclassifier(classifier):
       dic[c] = p
     return dic
 
+class total_classify(classifier):
+  """docstring for total_classify"""
+  def __init__(self, getfeatures):
+    classifier.__init__(self,getfeatures)
+
+  def total_classifypercent(self, fdata):
+    dic = dict()
+    for it in self.categories():
+      p= self.total_fisherprob(it, fdata)
+      dic[it] = p
+    return dic
+
+  def total_fisherprob(self, key, features):
+    p= self.total_weightedprob(key, features)
+    print "p:%s"%p
+    fscore=-2*math.log(p)
+
+    return self.invchi2(fscore, len(features)*2)
+
+  def total_weightedprob(self, key, features, def_weight=0.5):
+    p= 1
+    for f in features:
+      jsdata = json.loads(f)
+      if key in jsdata.keys():
+        p*= jsdata[key]
+      else:
+        p*= def_weight
+    return p
+
+  def invchi2(self,chi, df):
+    m = chi / 2.0
+    sum = term = math.exp(-m)
+    for i in range(1, df//2):
+        term *= m / i
+        sum += term
+    return min(sum, 1.0)
+
+def sortedDictValues(adict):
+  items = adict.items()
+  items.sort()
+  items.reverse()
+  return [value for key, value in items]
 
 def sampletrain(cl):
   cl.train('Nobody owns the water.','good')
