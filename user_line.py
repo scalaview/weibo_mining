@@ -30,9 +30,7 @@ def main():
 
 	with open(cache_file, 'w') as f:
 		for x in info:
-			print "info:%s"%x['text']
 			p= cl.classifypercent(x['text'])
-			print p
 			f.write(json.dumps(p)+"\n")
 
 	with open(cache_file, "rb") as f:

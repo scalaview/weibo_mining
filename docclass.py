@@ -239,7 +239,6 @@ class total_classify(classifier):
 
   def total_fisherprob(self, key, features):
     p= self.total_weightedprob(key, features)
-    print "p:%s"%p
     fscore=-2*math.log(p)
 
     return self.invchi2(fscore, len(features)*2)
